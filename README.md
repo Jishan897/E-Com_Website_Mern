@@ -61,3 +61,19 @@ The admin panel can add/edit/hide/delete products, upload product images (or pas
 
 # E-Com_Website_Mern
 fea6e7197a1c0b963ae698ba23273cd627c065d7
+DATA BASE SCHEMA -
+┌────────────────────┐          ┌──────────────────────┐          ┌────────────────────┐
+│       USERS        │ 1      * │        ORDERS        │ *      * │      PRODUCTS      │
+│────────────────────│──────────│──────────────────────│──────────│────────────────────│
+│ _id (PK)           │  places  │ _id (PK)             │ contains │ _id (PK)           │
+│ name               │          │ orderNumber (unique) │          │ name               │
+│ email (unique)     │          │ user  (FK → users)   │          │ slug (unique)      │
+│ password (hashed)  │          │ items[]              │          │ brand              │
+│ role               │          │   product (FK →      │          │ category           │
+│ wishlist[] (FK ────┼──┐       │     products)        │          │ price, mrp         │
+│   → products)      │  │       │ shippingAddress{}    │          │ images[]           │
+│ lastAddress{}      │  │       │ status, payment...   │          │ sizes[]{label,     │
+└────────────────────┘  │       │ totals               │          │   stock}           │
+                        │       └──────────────────────┘          │ tags[], flags      │
+                        │  * saves                              * └────────────────────┘
+                        └────────────────────────────────────────────────▲
