@@ -1,0 +1,13 @@
+{
+  "name": "trendi",
+  "private": true,
+  "scripts": {
+    "install-all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n server,client -c yellow,cyan \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "seed": "npm run seed --prefix server",
+    "make-admin": "npm run make-admin --prefix server --"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}
