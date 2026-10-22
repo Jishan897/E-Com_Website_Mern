@@ -1,3 +1,4 @@
+ HEAD
 # Trendi
 
 Sneakers & streetwear store built on the MERN stack (MongoDB, Express, React, Node).
@@ -57,3 +58,6 @@ The admin panel can add/edit/hide/delete products, upload product images (or pas
 
 - Uploaded images are stored on the server's disk. Many hosts (e.g. Render free tier) wipe the disk on redeploy — switch to Cloudinary or S3 for production.
 - Set `NODE_ENV=production` and `CLIENT_URL=<your site URL>` on the server, and `VITE_API_URL=<your API URL>` for the client build.
+
+# E-Com_Website_Mern
+fea6e7197a1c0b963ae698ba23273cd627c065d7
